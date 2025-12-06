@@ -21,8 +21,12 @@ app.use(json())
 // This configuration allows ANY website to talk to your backend.
 // This is easiest for deployment. You can lock it down later if you want.
 app.use(cors({
-    origin: "*", // Allow all origins (Netlify, localhost, etc.)
-    credentials: true // Keep this if you use cookies, otherwise optional
+    origin: [
+        "http://localhost:3000", // Your laptop
+        "https://fogexplore.netlify.app", // Your Main Netlify URL (I guessed this from your error log)
+        "https://6933c62b55b0a3afa2712e94--fogexplore.netlify.app" // The specific link you are clicking right now
+    ],
+    credentials: true
 }));
 
 // ----------Routes----------
