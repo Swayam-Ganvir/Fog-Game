@@ -50,7 +50,7 @@ export default function UserProfile() {
     if (!id) return;
 
     axios
-      .get(`http://localhost:8000/api/user/userProfile/${id}`)
+      .get(`https://fog-game.onrender.com/api/user/userProfile/${id}`)
       .then((res) => {
         setUser(res.data);
         setLoading(false);
@@ -136,7 +136,7 @@ export default function UserProfile() {
     setIsDeleting(true);
     try {
       // Use DELETE method for deleting resources. Ensure your backend supports this.
-      await axios.post(`http://localhost:8000/api/user/deleteProfile/${id}`);
+      await axios.post(`https://fog-game.onrender.com/api/user/deleteProfile/${id}`);
       alert("Profile deleted successfully");
       router.push("/"); // Correctly use the router instance
     } catch (error) {

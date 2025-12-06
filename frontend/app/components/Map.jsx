@@ -336,7 +336,7 @@ export default function LeafletMap() {
         return;
       }
       await axios.post(
-        "http://localhost:8000/api/mapData/save-map-data",
+        "https://fog-game.onrender.com/api/mapData/save-map-data",
         {
           userId,
           location: playerPos
@@ -373,7 +373,7 @@ export default function LeafletMap() {
     try {
       const userId = localStorage.getItem("mongo_user_id");
       if (userId) {
-        await axios.post("http://localhost:8000/api/userLogout", {
+        await axios.post("https://fog-game.onrender.com/api/userLogout", {
           userId,
           isOnline: false,
         });
@@ -392,7 +392,7 @@ export default function LeafletMap() {
       if (!playerPos) return;
       const userId = localStorage.getItem("mongo_user_id");
       const [lat, lng] = playerPos;
-      const response = await axios.get("http://localhost:8000/api/user/path", {
+      const response = await axios.get("https://fog-game.onrender.com/api/user/path", {
         params: { userId, lat, lng, checkpointIndex: index },
       });
       const { path } = response.data;
@@ -411,7 +411,7 @@ export default function LeafletMap() {
 
   const handleRemoveCheckpoint = async (index) => {
     try {
-      const res = await axios.delete("http://localhost:8000/api/user/deleteCheckpoint", {
+      const res = await axios.delete("https://fog-game.onrender.com/api/user/deleteCheckpoint", {
         data: { userId: userId, index },
       });
 

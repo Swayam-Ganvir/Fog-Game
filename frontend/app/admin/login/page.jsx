@@ -33,7 +33,7 @@ export default function AdminLogin() {
 
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/admin/adminLogin",
+        "https://fog-game.onrender.com/api/admin/adminLogin",
         { email, password }
       );
 

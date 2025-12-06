@@ -81,8 +81,8 @@ export default function AuthForm() {
     setError("");
 
     const endpoint = isLogin
-      ? "http://localhost:8000/api/userLogin"
-      : "http://localhost:8000/api/userRegister";
+      ? "https://fog-game.onrender.com/api/userLogin"
+      : "https://fog-game.onrender.com/api/userRegister";
 
     const payload = isLogin
       ? { email: form.email, password: form.password }

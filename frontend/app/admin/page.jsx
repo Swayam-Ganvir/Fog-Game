@@ -147,7 +147,7 @@ const AdminPanel = () => {
         if (!loading) {
             const fetchUsers = async () => {
                 try {
-                    const res = await axios.get('http://localhost:8000/api/admin/allUsers', {
+                    const res = await axios.get('https://fog-game.onrender.com/api/admin/allUsers', {
                         headers: {
                             Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
                         },
@@ -171,7 +171,7 @@ const AdminPanel = () => {
         if (!userToDelete) return;
 
         try {
-            await axios.delete(`http://localhost:8000/api/admin/deleteUser/${userToDelete.id}`, {
+            await axios.delete(`https://fog-game.onrender.com/api/admin/deleteUser/${userToDelete.id}`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
                 },

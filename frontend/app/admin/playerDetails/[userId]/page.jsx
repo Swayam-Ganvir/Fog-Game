@@ -99,7 +99,7 @@ export default function PlayerDetails() {
     const fetchUser = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8000/api/admin/user/${userId}`
+          `https://fog-game.onrender.com/api/admin/user/${userId}`
         );
         setUser(res.data.user);
       } catch (err) {
@@ -114,7 +114,7 @@ export default function PlayerDetails() {
 
   const handleConfirmDelete = async () => {
     try {
-      await axios.delete(`http://localhost:8000/api/admin/deleteUser/${userId}`);
+      await axios.delete(`https://fog-game.onrender.com/api/admin/deleteUser/${userId}`);
       toast.success("User deleted successfully!");
       setIsDeleteModalOpen(false);
       router.push("/admin");

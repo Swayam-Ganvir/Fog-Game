@@ -4,7 +4,7 @@ import axios from "axios";
 export function useGameSave() {
   // ✅ Create axios instance here
   const apiClient = axios.create({
-    baseURL: "http://localhost:8000/api/mapData",
+    baseURL: "https://fog-game.onrender.com/api/mapData",
     withCredentials: true,
   });
 
