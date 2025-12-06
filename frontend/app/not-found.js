@@ -1,8 +1,8 @@
 // app/not-found.js
 "use client";
 
-import Link from 'next/link';
-import { Compass, Home } from 'lucide-react';
+import Link from "next/link";
+import { Compass, Home } from "lucide-react";
 
 export default function NotFound() {
   return (
@@ -10,7 +10,6 @@ export default function NotFound() {
       <div className="w-full max-w-lg text-center">
         {/* Themed card matching the UserProfile style */}
         <div className="bg-white/70 backdrop-blur-sm rounded-xl p-8 sm:p-12 border border-gray-200 shadow-xl transform transition-all duration-500 hover:scale-[1.02]">
-          
           {/* Large, thematic icon */}
           <Compass className="mx-auto w-24 h-24 text-blue-500 mb-6 animate-pulse" />
 
@@ -21,7 +20,7 @@ export default function NotFound() {
 
           {/* Helper message */}
           <p className="text-lg text-gray-600 mb-8">
-            It seems you've wandered off the beaten path. The page you're looking for doesn't exist.
+            It seems you&apos;ve wandered off the beaten path. The page you&apos;re looking for doesn&apos;t exist.
           </p>
 
           {/* Call-to-action button */}
